@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="ISO-8859-1">
+<title>angular js</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<script src="js/angular.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+	<div class="container">
+	<h2 class="text-center">Global & Advanced Search<span class="glyphicon glyphicon-search"> </span></h2><br />
+	<input type="text" class="btn btn-default"  placeholder="Global Search" ng-model="searchBox.$"/>
+	<input type="text" class="btn btn-default"  placeholder="Name Search" ng-model="searchBox.name"/>
+	<input type="text" class="btn btn-default"  placeholder="Age Search" ng-model="searchBox.age"/>
+	<input type="text" class="btn btn-default"  placeholder="Country Search" ng-model="searchBox.country"/><br /><br />
+	<table class="table table-striped">
+		<thead>
+			<tr class="success">
+				<th>Name</th>
+				<th>Age</th>
+				<th>Country</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in emp | filter : searchBox">
+				<td>{{x.name}}</td>
+				<td>{{x.age}}</td>
+				<td>{{x.country}}</td>
+				<td>
+				<a href="#" class="btn btn-info btn-sm">
+          <span class="glyphicon glyphicon-edit"></span>
+        </a>
+				</td>
+				<td>
+				<a href="#" class="btn btn-info btn-sm">
+          <span class="glyphicon glyphicon-trash"></span> 
+        </a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	
+	
+	</div>
+
+</body>
+</html>
