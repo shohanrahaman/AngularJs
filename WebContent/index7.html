@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Angular Js</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+<script src="js/angular.js"></script>
+<script src="js/script7.js"></script>
+</head>
+<body class="container">
+	<div ng-controller="myCtrl" class="table-responsive">
+	<table class="table table-striped ">
+		<thead>
+			<tr class="active">
+				<th>Name</th>
+				<th>Age</th>
+				<th>Address</th>
+			</tr>
+		</tbody>
+		<thead>
+			<tr ng-repeat="x in employee" class="info">
+				<td>{{x.name}}</td>
+				<td>{{x.age}}</td>
+				<td>{{x.address}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</body>
+</html>

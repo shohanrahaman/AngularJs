@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Angular Js</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+<script src="js/angular.js"></script>
+<script src="js/script6.js"></script>
+</head>
+<body class="container">
+	<div ng-controller="myController">
+	<table class="table table-striped tible-bordered table-hover">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Likes</th>
+				<th>DisLikes</th>
+				<th>Likes / Dislikes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="technology in technologies">
+				<td>{{technology.name}}</td>
+				<td>{{technology.likes}}</td>
+				<td>{{technology.dislikes}}</td>
+				<td>
+				<input class="btn btn-primary" type="button" value="likes"  ng-click="incrementLikes(technology)"/>
+				<input class="btn btn-primary" type="button" value="likes"  ng-click="incrementdislikes(technology)"/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</body>
+</html>
